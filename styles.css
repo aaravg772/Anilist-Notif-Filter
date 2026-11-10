@@ -1,0 +1,105 @@
+#alm-mentions-panel {
+  color: var(--color-text, #edf1f5);
+}
+
+#alm-mentions-panel .alm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+#alm-mentions-panel .alm-header h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text, #edf1f5);
+}
+
+#alm-mentions-panel .alm-refresh-btn,
+#alm-mentions-panel .alm-more-btn {
+  background: var(--color-foreground, #151f2e);
+  color: var(--color-text, #edf1f5);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#alm-mentions-panel .alm-refresh-btn:hover,
+#alm-mentions-panel .alm-more-btn:hover {
+  background: var(--color-background-300, #222d3d);
+}
+
+#alm-mentions-panel .alm-status {
+  color: var(--color-text-lighter, #9fadbd);
+  padding: 8px 0;
+}
+
+/* Notification Rows (matching AniList native look) */
+#alm-mentions-panel .alm-notif-item {
+  display: flex;
+  align-items: center;
+  background: var(--color-foreground, #151f2e);
+  border-radius: 4px;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+#alm-mentions-panel .alm-avatar {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 14px;
+}
+
+#alm-mentions-panel .alm-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#alm-mentions-panel .alm-details {
+  flex-grow: 1;
+  font-size: 0.92rem;
+  padding-right: 90px;
+}
+
+#alm-mentions-panel .alm-user-link {
+  font-weight: 600;
+  color: var(--color-text, #edf1f5);
+  text-decoration: none;
+}
+
+#alm-mentions-panel .alm-user-link:hover,
+#alm-mentions-panel .alm-context-link:hover {
+  color: var(--color-blue, #3db4f2);
+}
+
+#alm-mentions-panel .alm-context-link {
+  color: var(--color-blue, #3db4f2);
+  text-decoration: none;
+}
+
+#alm-mentions-panel .alm-time {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  color: var(--color-text-lighter, #9fadbd);
+}
+
+#alm-mentions-panel .alm-more-wrap {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#alm-mentions-panel button[hidden] {
+  display: none;
+}

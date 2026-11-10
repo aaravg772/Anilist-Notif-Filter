@@ -1,0 +1,29 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AniList Mentions</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <main>
+    <h1>AniList Mentions</h1>
+    <p class="hint">Connect with an AniList API token. Your AniList password is never entered or stored here.</p>
+    <label for="token">AniList access token</label>
+    <input id="token" type="password" placeholder="Paste access token" autocomplete="off">
+    <div class="row">
+      <button id="save">Save token</button>
+      <button id="clear" class="secondary">Disconnect</button>
+    </div>
+    <p id="status" role="status"></p>
+    <details>
+      <summary>How to get a token</summary>
+      <ol>
+        <li>Create an app in AniList Developer settings.</li>
+        <li>Set its Redirect URL to <code>https://anilist.co/api/v2/oauth/pin</code>.</li>
+        <li>Enter your app's Client ID below, then click Authorize.</li>
+        <li>Copy the access token shown by AniList and paste it above.</li>
+      </ol>
+      <label for="client">AniList Client ID</label>
+      <input id="client" inputmode="numeric" placeholder="Client ID">
+      <button id="authorize" class="secondary">Authorize with AniList</button>
+    </details>
+    <p class="foot">Token is stored locally in Chrome extension storage and used only for AniList GraphQL requests.</p>
+  </main>
+  <script src="popup.js"></script>
+</body></html>
