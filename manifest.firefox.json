@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "AniList Mentions Filter",
+  "version": "1.0.0",
+  "description": "Adds a native-looking Mentions filter to AniList notifications using the official GraphQL API.",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://graphql.anilist.co/*",
+    "https://anilist.co/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AniList Mentions"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://anilist.co/notifications*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "anilist-mentions-filter@extension.local"
+    }
+  }
+}
