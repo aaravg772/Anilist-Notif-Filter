@@ -24,6 +24,8 @@ A lightweight, native-styled browser extension for [AniList](https://anilist.co)
 
 ### Step 2: Choose Your Browser
 
+**`manifest.firefox.json`** is only for Firefox.
+
 #### Option A: Chrome / Vivaldi / Brave / Edge
 1. Open your Chromium-based browser.
 2. Type or paste **`chrome://extensions`** into your address bar and hit **Enter**.
@@ -32,6 +34,7 @@ A lightweight, native-styled browser extension for [AniList](https://anilist.co)
 5. Select the **unzipped folder** you extracted in Step 1 (the folder containing `manifest.json`).
 
 #### Option B: Firefox
+1. Rename **`manifest.firefox.json`** to **`manifest.json`** and delete the original **`manifest.json`**
 1. Open Firefox.
 2. Type or paste **`about:debugging#/runtime-this-firefox`** into your address bar and hit **Enter**.
 3. Click **Load Temporary Add-on...**
